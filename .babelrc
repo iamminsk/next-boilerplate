@@ -1,4 +1,10 @@
 {
-  "plugins": ["emotion"],
-  "presets": ["@emotion/babel-preset-css-prop", "@babel/typescript"]
+  "plugins": ["@emotion/babel-plugin"],
+  "presets": [
+    "@babel/typescript",
+    [
+      "@babel/preset-react",
+      { "runtime": "automatic", "importSource": "@emotion/react" }
+    ]
+  ]
 }
